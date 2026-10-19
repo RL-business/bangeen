@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#493326">
+
+  <meta
+    name="description"
+    content="DEUTSCHLAND BOUTIQUE - Online luxury perfume boutique since 2016. Trust, quality and convenient delivery."
+  >
+
+  <title>DEUTSCHLAND BOUTIQUE | Luxury Perfumes</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js" defer></script>
+
+  <!-- NEW INTRO STYLING -->
+  <style>
+    .hero-subtitle {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(23px, 3vw, 32px);
+      font-weight: 500;
+      color: #D8B77D;
+      margin-bottom: 22px;
+    }
+
+    .hero-promise {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #D8B77D;
+      margin-bottom: 28px;
+    }
+
+    .hero-content {
+      max-width: 730px;
+    }
+
+    .hero-description {
+      max-width: 570px;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: 90svh;
+      }
+
+      .hero-subtitle {
+        font-size: 23px;
+      }
+
+      .hero-promise {
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ==================================
+       FULL WEBSITE VIDEO BACKGROUND
+  ================================== -->
+
+  <div class="video-background" aria-hidden="true">
+
+    <video autoplay muted loop playsinline preload="auto">
+
+      <source src="25fps.mp4" type="video/mp4">
+
+    </video>
+
+  </div>
+
+
+  <!-- ==================================
+       NAVIGATION BAR
+  ================================== -->
+
+  <header class="navbar">
+
+    <a href="#home" class="logo">
+      DEUTSCHLAND <span>BOUTIQUE</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+
+      <a href="#home">Home</a>
+
+      <a href="#collection">Collection</a>
+
+      <a href="#about">Our Story</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- ==================================
+         HOME - SINCE 2016
+         CLEAR VIDEO BACKGROUND
+    ================================== -->
+
+    <section class="hero" id="home">
+
+      <div class="hero-shade"></div>
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          ESTABLISHED IN 2016
+        </p>
+
+        <h1>
+          Luxury is a<br>
+          <span>Signature.</span>
+        </h1>
+
+        <h3 class="hero-subtitle">
+          A Decade of Trust, Quality & Elegance.
+        </h3>
+
+        <p class="hero-description">
+
+          Since 2016, DEUTSCHLAND BOUTIQUE has been
+          dedicated to bringing exceptional fragrances
+          closer to you.
+
+          <br><br>
+
+          As an online perfume boutique, we believe in
+          quality, trust, and a seamless shopping experience,
+          with convenient delivery to your doorstep.
+
+        </p>
+
+        <p class="hero-promise">
+          YOUR TRUST. OUR PROMISE.
+        </p>
+
+        <a href="#collection" class="gold-button">
+          EXPLORE COLLECTION
+        </a>
+
+      </div>
+
+      <p class="hero-caption">
+        A WORLD OF TIMELESS ELEGANCE
+      </p>
+
+    </section>
+
+
+    <!-- ==================================
+         PERFUME COLLECTION
+         4 LV + 4 DIOR + 4 CHANEL
+    ================================== -->
+
+    <section class="collection section" id="collection">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          CURATED FOR YOU
+        </p>
+
+        <h2>
+          Our <span>Collection</span>
+        </h2>
+
+        <p>
+          Discover iconic fragrances from Louis Vuitton,
+          Dior and CHANEL.
+        </p>
+
+      </div>
+
+
+      <!-- SEARCH & FILTERS -->
+
+      <div class="controls">
+
+        <input
+          type="search"
+          id="search"
+          placeholder="Search perfumes..."
+          aria-label="Search perfumes"
+        >
+
+        <div class="filters" aria-label="Filter perfumes">
+
+          <button
+            type="button"
+            class="filter active"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            type="button"
+            class="filter"
+            data-filter="lv"
+          >
+            Louis Vuitton
+          </button>
+
+          <button
+            type="button"
+            class="filter"
+            data-filter="dior"
+          >
+            Dior
+          </button>
+
+          <button
+            type="button"
+            class="filter"
+            data-filter="chanel"
+          >
+            CHANEL
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- RESULTS COUNT -->
+
+      <p
+        id="results-count"
+        class="results-count"
+        aria-live="polite"
+      ></p>
+
+
+      <!-- PERFUMES DISPLAYED BY SCRIPT.JS -->
+
+      <div id="products" class="products"></div>
+
+    </section>
+
+
+    <!-- ==================================
+         OUR STORY
+    ================================== -->
+
+    <section class="about section" id="about">
+
+      <div class="about-content">
+
+        <p class="eyebrow">
+          TRUSTED SINCE 2016
+        </p>
+
+        <h2>
+          More Than a <span>Fragrance</span>
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+          Founded in 2016, DEUTSCHLAND BOUTIQUE is an
+          online perfume boutique built on trust,
+          quality and a passion for elegant fragrances.
+        </p>
+
+        <p>
+          We believe every fragrance tells a story.
+          Our mission is to make discovering beautiful
+          scents simple, enjoyable and convenient,
+          with attentive service and delivery
+          to your doorstep.
+        </p>
+
+        <p>
+          Your trust is our greatest achievement,
+          and your satisfaction is always our priority.
+        </p>
+
+        <a href="#collection" class="outline-button">
+          DISCOVER COLLECTION
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================
+         CONTACT
+    ================================== -->
+
+    <section class="contact section" id="contact">
+
+      <p class="eyebrow">
+        LET'S CONNECT
+      </p>
+
+      <h2>
+        Your Next Signature <span>Awaits.</span>
+      </h2>
+
+      <p>
+        Shop online with confidence.
+        Contact us for fragrance inquiries,
+        availability and delivery information.
+      </p>
+
+
+      <div class="contact-buttons">
+
+        <a
+          href="#"
+          id="whatsapp"
+          class="gold-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WHATSAPP
+        </a>
+
+        <a
+          href="#"
+          id="instagram"
+          class="outline-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          INSTAGRAM
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==================================
+       FOOTER
+  ================================== -->
+
+  <footer>
+
+    <a href="#home" class="logo">
+      DEUTSCHLAND <span>BOUTIQUE</span>
+    </a>
+
+    <p class="footer-tagline">
+      TRUST • QUALITY • ELEGANCE • SINCE 2016
+    </p>
+
+    <p>
+      © <span id="year"></span>
+      DEUTSCHLAND BOUTIQUE.
+    </p>
+
+    <small>
+      Independent online boutique.
+      Not affiliated with Louis Vuitton, Dior or CHANEL.
+    </small>
+
+  </footer>
+
+
+  <!-- ==================================
+       PERFUME DETAILS POPUP
+  ================================== -->
+
+  <dialog
+    id="product-dialog"
+    aria-labelledby="dialog-name"
+  >
+
+    <button
+      type="button"
+      id="close-dialog"
+      class="close-dialog"
+      aria-label="Close details"
+    >
+      ×
+    </button>
+
+
+    <!-- PERFUME IMAGE -->
+
+    <img
+      id="dialog-image"
+      src=""
+      alt=""
+    >
+
+
+    <!-- PERFUME INFORMATION -->
+
+    <p
+      class="eyebrow"
+      id="dialog-brand"
+    ></p>
+
+    <h2 id="dialog-name"></h2>
+
+    <p id="dialog-description"></p>
+
+
+    <div class="detail-row">
+
+      <strong>
+        Fragrance family
+      </strong>
+
+      <span id="dialog-family"></span>
+
+    </div>
+
+
+    <div class="detail-row">
+
+      <strong>
+        Character
+      </strong>
+
+      <span id="dialog-character"></span>
+
+    </div>
+
+
+    <!-- WHATSAPP INQUIRY -->
+
+    <a
+      href="#"
+      id="dialog-contact"
+      class="gold-button dialog-contact"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ASK ABOUT THIS PERFUME
+    </a>
+
+  </dialog>
+
+</body>
+</html>
